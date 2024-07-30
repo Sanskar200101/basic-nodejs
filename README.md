@@ -1,4 +1,4 @@
-# basic-nodeks - Node.js Basic Application
+# basic-nodejs - Node.js Basic Application
 
 Welcome to the Basic Node.js Application! This repository provides a simple Node.js application that serves as a starting point for developers looking to learn about and deploy a Node.js app. Whether you are a beginner or looking to refresh your skills, this guide will help you set up and run the application with ease.
 
