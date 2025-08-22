@@ -1,0 +1,35 @@
+name: Node.js CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'  # You can change this version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build app (optional)
+        run: npm run build
+
+      # Uncomment and configure if you want to deploy
+      # - name: Deploy to production
+      #   run: |
+      #     echo "Deploy script goes here"
+      #     # e.g., rsync, scp, Netlify CLI, Vercel CLI, or a custom script
